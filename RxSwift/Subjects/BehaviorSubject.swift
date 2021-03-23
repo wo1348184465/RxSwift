@@ -45,7 +45,7 @@ public final class BehaviorSubject<Element>
     /// Initializes a new instance of the subject that caches its last value and starts with the specified value.
     ///
     /// - parameter value: Initial value sent to observers when no other value has been received by the subject yet.
-    public init(value: Element) {
+    @inline(never) public init(value: Element) {
         self.element = value
 
         #if TRACE_RESOURCES
